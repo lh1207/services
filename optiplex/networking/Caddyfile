@@ -1,0 +1,63 @@
+{
+  admin off
+  auto_https off
+}
+
+# ── AI ────────────────────────────────────────────────────────────────────────
+
+ai.localhost {
+  reverse_proxy localhost:3000
+}
+
+# ── Dev ───────────────────────────────────────────────────────────────────────
+
+pgadmin.localhost {
+  reverse_proxy localhost:5050
+}
+
+# ── Services ──────────────────────────────────────────────────────────────────
+
+vault.localhost {
+  encode gzip
+  reverse_proxy localhost:8080
+}
+
+git.localhost {
+  reverse_proxy localhost:3001
+}
+
+bookstack.localhost {
+  reverse_proxy localhost:6875
+}
+
+# ── Media ─────────────────────────────────────────────────────────────────────
+
+jellyfin.localhost {
+  reverse_proxy localhost:8096
+}
+
+# ── Home ──────────────────────────────────────────────────────────────────────
+
+homebridge.localhost {
+  reverse_proxy localhost:8581
+}
+
+# ── DNS ───────────────────────────────────────────────────────────────────────
+
+pihole.localhost {
+  reverse_proxy localhost:8888
+}
+
+# ── Monitoring ────────────────────────────────────────────────────────────────
+
+grafana.localhost {
+  reverse_proxy localhost:3002
+}
+
+portainer.localhost {
+  reverse_proxy localhost:9000
+}
+
+uptime.localhost {
+  reverse_proxy localhost:3003
+}

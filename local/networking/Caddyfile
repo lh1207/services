@@ -15,10 +15,12 @@ pgadmin.localhost {
 
 # ── Optiplex (192.168.50.20) ──────────────────────────────────────────────────
 
+# AI
 ai.localhost {
   reverse_proxy 192.168.50.20:3000
 }
 
+# Services
 vault.localhost {
   encode gzip
   reverse_proxy 192.168.50.20:8080
@@ -28,10 +30,34 @@ git.localhost {
   reverse_proxy 192.168.50.20:3001
 }
 
+bookstack.localhost {
+  reverse_proxy 192.168.50.20:6875
+}
+
+# Media
+jellyfin.localhost {
+  reverse_proxy 192.168.50.20:8096
+}
+
+# Home
+homebridge.localhost {
+  reverse_proxy 192.168.50.20:8581
+}
+
+# DNS
+pihole.localhost {
+  reverse_proxy 192.168.50.20:8888
+}
+
+# Monitoring
 grafana.localhost {
   reverse_proxy 192.168.50.20:3002
 }
 
 portainer.localhost {
   reverse_proxy 192.168.50.20:9000
+}
+
+uptime.localhost {
+  reverse_proxy 192.168.50.20:3003
 }
