@@ -17,6 +17,7 @@ services:
       PUID: 1000
       PGID: 1000
       TZ: America/New_York
+      APP_KEY: base64:rdPu9zJFiKZ+JwEtUUGGmfE2Hv9jyvsws8anWxtCH7Y=
       APP_URL: http://bookstack.localhost
       DB_HOST: bookstack-db
       DB_PORT: 3306

@@ -13,9 +13,7 @@ services:
     ports:
       - "3000:8080"
     environment:
-      # Point back to Ollama running on your Mac — replace YOUR_MAC_IP
-      # Run: ipconfig getifaddr en0 on your Mac to find it
-      OLLAMA_BASE_URL: http://YOUR_MAC_IP:11434
+      OLLAMA_BASE_URL: http://192.168.50.60:11434  # Ollama on Mac
     volumes:
       - openwebui_data:/app/backend/data
     networks:
